@@ -1,0 +1,128 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: hsl(30, 38%, 92%);
+}
+
+.container {
+  max-width: 640px;
+  height: 480px;
+  margin: 100px auto;
+  background: hsl(0, 0%, 100%);
+  border-radius: 10px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  overflow: hidden;
+}
+
+.image {
+  background-image: url("./images/image-product-desktop.jpg");
+  background-position: top;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.content {
+  padding: 30px;
+}
+
+.content .head {
+  font-family: "Montserrat", sans-serif;
+  font-size: 15px;
+  opacity: 40%;
+  letter-spacing: 3px;
+  font-weight: 600;
+  padding-bottom: 15px;
+}
+
+.content .big__text {
+  font-family: "Fraunces", sans-serif;
+  font-size: 37px;
+  padding-bottom: 25px;
+}
+
+.content .small__text {
+  font-family: "Montserrat", sans-serif;
+  font-size: 15px;
+  opacity: 40%;
+  font-weight: 600;
+  padding-bottom: 25px;
+}
+
+.price {
+  display: flex;
+  align-items: center;
+  padding-bottom: 35px;
+}
+
+.current__price {
+  font-family: "Fraunces", sans-serif;
+  color: hsl(158, 36%, 37%);
+  font-size: 35px;
+  font-weight: 700;
+  margin-right: 10px;
+}
+
+.previous__price {
+  font-family: "Fraunces", sans-serif;
+  font-size: 16px;
+  opacity: 40%;
+}
+
+.cart__btn {
+  font-family: "Montserrat", sans-serif;
+  background-color: hsl(158, 36%, 37%);
+  color: hsl(0, 0%, 100%);
+  width: 100%;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.cart__icon {
+  margin-right: 15px;
+}
+
+footer {
+  background: hsl(158, 36%, 37%);
+  color: hsl(0, 0%, 100%);
+  height: 20px;
+  text-align: center;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  font-family: "Montserrat", sans-serif;
+}
+
+footer a {
+  color: hsl(0, 0%, 100%);
+}
+
+@media screen and (max-width: 658px) {
+  .container {
+    max-width: 320px;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    /* overflow: visible; */
+    height: 800px;
+  }
+  .image {
+    background-image: url("./images/image-product-mobile.jpg");
+    background-size: cover;
+    /* padding-bottom: 400px; */
+  }
+
+  footer {
+    height: 40px;
+  }
+}
